@@ -20,7 +20,7 @@ import java.util.function.Function;
 @Slf4j
 @Service
 public class JwtService {
-    @Value("${app.auth.tokenSecret}")
+    @Value("${app.auth.tokenSecret::default-secret-key}")
     private String secretKey;
 
     @Value("${app.auth.tokenExpiration}")

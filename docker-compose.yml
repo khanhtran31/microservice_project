@@ -73,10 +73,11 @@ services:
     networks:
       - spring-microservice
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/microservice?createDatabaseIfNotExist=true&characterEncoding=UTF-8&serverTimeZone=UTC
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/microservice
       SPRING_DATASOURCE_USERNAME: khanhtq
       SPRING_DATASOURCE_PASSWORD: khanh3128
       SPRING_APPLICATION_NAME: auth-service
+      EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE: http://eureka-server:8761/eureka/
       TOKEN_SECRET: ${TOKEN_SECRET}
 
   department-service:
@@ -93,7 +94,7 @@ services:
     networks:
       - spring-microservice
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/microservice?createDatabaseIfNotExist=true&characterEncoding=UTF-8&serverTimeZone=UTC
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/microservice
       SPRING_DATASOURCE_USERNAME: khanhtq
       SPRING_DATASOURCE_PASSWORD: khanh3128
       SPRING_APPLICATION_NAME: department-service
@@ -111,7 +112,7 @@ services:
       - eureka-server
       - config-service
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/microservice?createDatabaseIfNotExist=true&characterEncoding=UTF-8&serverTimeZone=UTC
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/microservice
       SPRING_DATASOURCE_USERNAME: khanhtq
       SPRING_DATASOURCE_PASSWORD: khanh3128
       SPRING_APPLICATION_NAME: account-service
@@ -131,7 +132,7 @@ services:
       - eureka-server
       - config-service
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/microservice?createDatabaseIfNotExist=true&characterEncoding=UTF-8&serverTimeZone=UTC
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/microservice
       SPRING_DATASOURCE_USERNAME: khanhtq
       SPRING_DATASOURCE_PASSWORD: khanh3128
       SPRING_APPLICATION_NAME: admin-service
