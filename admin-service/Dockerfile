@@ -14,4 +14,4 @@ COPY target/admin-service-0.0.1-SNAPSHOT.jar /app/admin-service-0.0.1-SNAPSHOT.j
 EXPOSE 8083
 
 # Câu lệnh để chạy ứng dụng
-ENTRYPOINT ["java", "-jar", "/app/account-service-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/app/admin-service-0.0.1-SNAPSHOT.jar"]
